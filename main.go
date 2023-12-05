@@ -110,8 +110,8 @@ func getSitemapURLFromDomain(domain string) (string, error) {
 	// Extract the domain from the input.
 	domain = extractDomain(domain)
 
-	// Create an HTTP client with a timeout of 1 second.
-	client := http.Client{Timeout: time.Second * 1}
+	// Create an HTTP client with a timeout of 3 seconds.
+	client := http.Client{Timeout: time.Second * 3}
 
 	// If no sitemap is found, fetch the robots.txt file.
 	robotsURL := fmt.Sprintf("https://%s/robots.txt", domain)
